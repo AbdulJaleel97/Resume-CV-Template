@@ -9,7 +9,7 @@ let blog = document.querySelector("#blog-card");
 let contacts = document.querySelector("#contacts-card");
 let contactBtn = document.getElementById("contact-btn");
 
-// Remove Active From All Then Add it to specific
+// Remove Active From All Lis Then Add it to The displayed Li
 allLis.forEach((e, i) => {
   // Get the Order of the Li Clicked On
   let index = i;
@@ -77,16 +77,17 @@ var mySwiper = new Swiper(".mySwiper", {
 // Scroll To Top
 let btn = document.querySelector(".scroll");
 window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 700) {
+  if (window.scrollY > 700) {
     btn.style.cssText = "visibility:visible;Opacity:1";
     btn.addEventListener("click", () => {
       window.scrollTo({ top: 0 });
     });
   }
-  if (window.pageYOffset < 700) {
+  if (window.scrollY < 700) {
     btn.style.cssText = "visibility:hidden;Opacity:0";
   }
 });
+
 
 // Type Js
 
